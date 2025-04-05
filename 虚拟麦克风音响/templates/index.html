@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask变量监控</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .panel {
+            flex: 1;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 3px;
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .timestamp {
+            font-size: 0.8em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flask服务器变量监控</h1>
+    <div class="timestamp">最后更新时间: <span id="last-update">从未更新</span></div>
+    
+    <div class="container">
+        <div class="panel">
+            <h2>服务器变量</h2>
+            <pre id="server-vars">等待数据...</pre>
+        </div>
+        
+        <div class="panel">
+            <h2>局部变量</h2>
+            <pre id="local-vars">等待数据...</pre>
+        </div>
+        
+        <div class="panel">
+            <h2>全局变量</h2>
+            <pre id="global-vars">等待数据...</pre>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

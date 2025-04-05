@@ -1,0 +1,4 @@
+easygui
+numpy
+sounddevice
+scipy
